@@ -19,11 +19,9 @@ func post(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Post Action")
 }
 
-//func init() {
-func main() {
+func init() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/photos", photos)
 	http.HandleFunc("/delete", delete)
 	http.HandleFunc("/post", post)
-	http.ListenAndServe(":5555", nil)
 }
